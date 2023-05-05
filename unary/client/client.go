@@ -35,7 +35,7 @@ func main() {
 	defer cancel()
 	r, err := c.MyFunction(ctx, &pb.MyNumber{Value: int32(*value)})
 	if err != nil {
-		log.Fatalf("could not greet: %v", err)
+		log.Fatalf("Error: %v", err)
 	}
-	log.Printf("Got: %d", int(r.GetValue()))
+	log.Printf("gRPC result:: %d", int(r.GetValue()))
 }

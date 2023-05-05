@@ -21,7 +21,7 @@ type server struct {
 }
 
 // SayHello implements helloworld.GreeterServer
-func (s *server) SayHello(ctx context.Context, in *pb.MyNumber) (*pb.MyNumber, error) {
+func (s *server) MyFunction(ctx context.Context, in *pb.MyNumber) (*pb.MyNumber, error) {
 	result := pb.MyFunction_unary(int(in.GetValue()))
 	return &pb.MyNumber{Value: int32(result)}, nil
 }
