@@ -10,7 +10,10 @@ import (
 	"log"
 )
 
-var serverAddr = flag.String("server_addr", "localhost:50051", "The server address with port")
+var (
+	serverAddr = flag.String("server_addr", "localhost:50051", "The server address with port")
+	value      = flag.Int("value", 5, "value to calculate")
+)
 
 func main() {
 	flag.Parse()
@@ -27,7 +30,7 @@ func main() {
 	}(conn)
 
 	client := pb.NewServerStreamingClient(conn)
-	stream, err := client.GetServerResponse(context.Background(), &pb.Number{Value: 1})
+	stream, err := client.GetServerResponse(context.Background(), &pb.Number{Value: int32(*value)})
 	if err != nil {
 		log.Fatalf("GetServerResponse - %v", err)
 	}
@@ -43,6 +46,6 @@ func main() {
 			log.Fatalf("GetServerResponse stream - %v", err)
 		}
 
-		log.Printf("Message: message: %s", content.GetMessage())
+		log.Printf("[server to client] %s", content.GetMessage())
 	}
 }
