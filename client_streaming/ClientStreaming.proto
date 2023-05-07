@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+option go_package = "github.com/jdk829355/go_fssn/ClientStreaming";
+
+service ClientStreaming {
+  // A Client streaming RPC.
+  rpc GetServerResponse(stream Message) returns (Number) {}
+}
+
+message Message {
+  string message = 1;
+}
+
+message Number {
+  int32 value = 1;
+}
