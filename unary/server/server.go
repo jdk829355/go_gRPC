@@ -21,7 +21,7 @@ type server struct {
 	pb.UnimplementedUnaryServiceServer
 }
 
-// proto 파일 내 정의한 rpc 함수 이름에 대응하는 함수 작성
+// MyFunction proto 파일 내 정의한 rpc 함수 이름에 대응하는 함수 작성
 func (s *server) MyFunction(ctx context.Context, in *pb.MyNumber) (*pb.MyNumber, error) {
 	// 사전에 정의한 MyFunction_unary(정수의 제곱 함수)를 MyFunction에 구현
 	result := pb.MyFunction_unary(int(in.GetValue()))
