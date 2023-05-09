@@ -14,10 +14,12 @@ type server struct {
 	pb.UnimplementedClientStreamingServer
 }
 
+// GetServerResponse 클라이언트로부터 받은 스트림에 대한 응답
 func (s *server) GetServerResponse(stream pb.ClientStreaming_GetServerResponseServer) error {
 	counter := 0
 	log.Println("Server processing gRPC client-streaming.")
 	for {
+		// stream의 한 요소를 Recv() 통하여 받음
 		_, err := stream.Recv()
 		if err == io.EOF {
 			break
@@ -25,8 +27,10 @@ func (s *server) GetServerResponse(stream pb.ClientStreaming_GetServerResponseSe
 		if err != nil {
 			log.Fatalf("Error when reading client request stream: %v", err)
 		}
+		// 개수를 카운트하기 위해 반복
 		counter++
 	}
+	// 스트림으로 응답을 주고 스트림 종료
 	err := stream.SendAndClose(&pb.Number{Value: int32(counter)})
 	if err != nil {
 		return err
