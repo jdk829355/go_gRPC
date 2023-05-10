@@ -1,4 +1,4 @@
-module github.com/jdk829355/go_fssn
+module github.com/jdk829355/go_gRPC
 
 go 1.20
 

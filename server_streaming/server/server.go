@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	pb "github.com/jdk829355/go_fssn/server_streaming/serverStreaming"
+	pb "github.com/jdk829355/go_gRPC/server_streaming/serverStreaming"
 	"google.golang.org/grpc"
 	"log"
 	"net"

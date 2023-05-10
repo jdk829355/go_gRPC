@@ -3,7 +3,7 @@ syntax = "proto3";
 package unaryService;
 
 
-option go_package = "github.com/jdk829355/go_fssn/unary/unaryService";
+option go_package = "github.com/jdk829355/go_gRPC/unary/unaryService";
 
 service UnaryService{
     rpc MyFunction(MyNumber) returns (MyNumber) {}

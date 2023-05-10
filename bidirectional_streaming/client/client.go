@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	pb "github.com/jdk829355/go_fssn/bidirectional_streaming/bidirectionalStreaming"
+	pb "github.com/jdk829355/go_gRPC/bidirectional_streaming/bidirectionalStreaming"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"io"

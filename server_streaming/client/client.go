@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"flag"
-	pb "github.com/jdk829355/go_fssn/server_streaming/serverStreaming"
+	pb "github.com/jdk829355/go_gRPC/server_streaming/serverStreaming"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"io"

@@ -1,6 +1,6 @@
 syntax= "proto3";
 
-option go_package = "github.com/jdk829355/go_fssn/serverStreaming";
+option go_package = "github.com/jdk829355/go_gRPC/serverStreaming";
 
 service ServerStreaming {
     // A Client streaming RPC.

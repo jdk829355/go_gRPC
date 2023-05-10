@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	pb "github.com/jdk829355/go_fssn/client_streaming/ClientStreaming"
+	pb "github.com/jdk829355/go_gRPC/client_streaming/ClientStreaming"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"log"

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package bidirectional;
 
-option go_package = "github.com/jdk829355/go_fssn/bidirectionalStreaming";
+option go_package = "github.com/jdk829355/go_gRPC/bidirectionalStreaming";
 
 service Bidirectional {
   // A Bidirectional streaming RPC.

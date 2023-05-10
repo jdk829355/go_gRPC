@@ -1,7 +1,7 @@
 package main
 
 import (
-	pb "github.com/jdk829355/go_fssn/bidirectional_streaming/bidirectionalStreaming"
+	pb "github.com/jdk829355/go_gRPC/bidirectional_streaming/bidirectionalStreaming"
 	"google.golang.org/grpc"
 	"io"
 	"log"

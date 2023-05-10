@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	pb "github.com/jdk829355/go_fssn/unary/unaryService"
+	pb "github.com/jdk829355/go_gRPC/unary/unaryService"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
